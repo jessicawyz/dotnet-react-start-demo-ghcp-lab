@@ -7,6 +7,21 @@
   --color-brand-content: #e0f1fa;
   --color-brand-primary: #0066cc;
   --color-brand-text: #333333;
+  --color-brand-surface: #ffffff;
+  --color-brand-subtle: #f3f4f6;
+  --color-brand-muted: #4b5563;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --color-brand-header: #1e3a5f;
+  --color-brand-content: #111827;
+  --color-brand-primary: #2563eb;
+  --color-brand-text: #f3f4f6;
+  --color-brand-surface: #1f2937;
+  --color-brand-subtle: #182232;
+  --color-brand-muted: #cbd5e1;
+  color-scheme: dark;
 }
 
 body {

@@ -48,3 +48,16 @@ export interface ApiErrorResponse {
     message: string;
   }>;
 }
+
+export type DisplayTheme = 'light' | 'dark';
+
+export interface UserPreferences {
+  theme: DisplayTheme;
+  inAppNotificationsIndicator: boolean;
+  emailNotificationsIndicator: boolean;
+}
+
+export interface PreferencesLoadResult {
+  preferences: UserPreferences;
+  errorMessage: string;
+}
