@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-header: #87adeb;
+  --color-brand-content: #e0f1fa;
+  --color-brand-primary: #0066cc;
+  --color-brand-text: #333333;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-brand-content);
+  color: var(--color-brand-text);
+}
