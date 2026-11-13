@@ -8,7 +8,7 @@ A minimal full-stack application template for learning GitHub Copilot capabiliti
 
 - **Backend:** .NET 8 Web API with Entity Framework Core
 - **Frontend:** React 18 + TypeScript + Vite + Tailwind CSS
-- **Testing:** xUnit + Moq (backend)
+- **Testing:** xUnit + Moq (backend), Jest + React Testing Library (frontend)
 
 This template is a companion to the [GitHub Copilot Customization Workshop](https://copilot-academy.github.io/workshops/copilot-customization). Please refer to the workshop materials for detailed instructions on how to configure and use GitHub Copilot agents, prompts, and skills in the context of this project.
 
@@ -65,6 +65,28 @@ npm run dev
 ```
 
 The frontend will be available at `http://localhost:5173`.
+
+### User Preferences
+
+Open **Preferences** to save a light or dark display theme and independent
+in-app/email notification settings. Defaults are light theme and notifications
+off. **Save preferences** commits changes; **Cancel** discards them.
+
+Settings persist only in this browser profile and site origin, not in an account
+or across devices. Notification settings store preferences only; notification
+delivery is not implemented. See the [frontend guide](frontend/README.md) for
+storage limitations, error recovery, and reset instructions.
+
+### Frontend Tests
+
+From `frontend/`, run:
+
+```bash
+npm test -- --runInBand
+```
+
+Add `--coverage` to generate coverage. Run `npm run lint` and `npm run build`
+to check lint rules and the production build.
 
 ## Project Structure
 

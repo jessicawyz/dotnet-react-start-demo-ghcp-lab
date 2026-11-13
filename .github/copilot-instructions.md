@@ -4,14 +4,14 @@
 - Backend: C# / .NET 8 ASP.NET Core Web API, EF Core InMemory, Swagger.
 - Frontend: React 18, strict TypeScript, Vite 5, React Router 6, Tailwind CSS 3.
 - Tests: xUnit, Moq, ASP.NET Core WebApplicationFactory, EF Core InMemory, Coverlet.
-- Frontend testing: Jest + React Testing Library are documented standards only; no dependencies or test script are configured.
+- Frontend testing: Jest + React Testing Library with jsdom; configuration in `frontend/jest.config.cjs` and shared setup in `frontend/src/test/setup.ts`.
 
 ## Commands
 Run each command from the directory shown; use .NET 8 SDK and Node.js 20+.
 | Directory | Restore/install | Build | Test | Lint/format check |
 | --- | --- | --- | --- | --- |
 | `backend/` | `dotnet restore` | `dotnet build` | `dotnet test` | `dotnet format --verify-no-changes` |
-| `frontend/` | `npm ci` | `npm run build` | Not configured | `npm run lint` |
+| `frontend/` | `npm ci` | `npm run build` | `npm test -- --runInBand` | `npm run lint` |
 Frontend build runs `tsc && vite build`; lint runs `eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0`.
 
 ## Folder layout
